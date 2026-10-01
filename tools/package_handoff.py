@@ -9,7 +9,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 COMMON = [
-    '.gitignore', 'voice_launcher.py', 'docs/VOICE_MODELS.md',
+    '.gitignore', 'LICENSE', 'THIRD_PARTY_NOTICES.md', 'voice_launcher.py', 'docs/VOICE_MODELS.md',
     'src/audio_stream.py', 'src/voice_launcher.py',
     'src/tts_bridge_server.py', 'src/tts_worker.py',
     'config/voice_candidates.json', 'voices/designed-soft.json', 'voices/designed-soft.wav',
@@ -60,6 +60,7 @@ def build(platform, destination, allow_dirty=False):
     manifest = json.loads(payload['chrome-extension/manifest.json'])
     info = {
         'package': package, 'version': manifest['version'], 'extensionVersion': manifest['version'],
+        'license': 'MIT',
         'sourceCommit': commit, 'sourceWorkingTreeDirty': dirty,
         'platform': 'Windows 11 x64' if windows else 'macOS Apple Silicon (arm64)', 'python': '3.11',
         'synthesisMode': 'phrase' if windows else 'streaming',

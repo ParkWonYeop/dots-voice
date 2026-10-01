@@ -46,3 +46,7 @@ Chrome에서 WebRTC 데이터 채널의 답변 자막을 받아 로컬 Qwen3-TTS
 ## 목소리·모델 교체
 
 ZIP 안의 `docs/VOICE_MODELS.md`를 따른다. 참조 WAV와 SHA-256을 바꾸는 음색 교체, 플랫폼에 맞는 Base 모델·revision·저장 폴더를 바꾸는 모델 교체, 재시작·확인·원복 절차를 설명한다. GitHub에서 읽는 경우 [온라인 안내](https://github.com/ParkWonYeop/dots-voice/blob/main/docs/VOICE_MODELS.md)를 사용한다.
+
+## 라이선스
+
+Dots Voice의 자체 코드·문서·설정·리소스는 MIT License를 따른다. 전문은 ZIP 루트의 `LICENSE`에 있다. 외부 모델·라이브러리는 원래 라이선스를 유지하며, 합성 참조 음성의 적용 범위와 구성 요소 출처는 `THIRD_PARTY_NOTICES.md`에 정리했다.

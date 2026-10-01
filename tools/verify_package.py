@@ -40,7 +40,8 @@ def verify(path):
         for name, digest in expected.items():
             if hashlib.sha256(archive.read(prefix + name)).hexdigest() != digest:
                 raise ValueError(f'Checksum mismatch: {name}')
-        for name in ('README.md', 'SETUP.md', 'AGENTS.md', 'CLAUDE.md', 'AGENT_PROMPT.txt',
+        for name in ('LICENSE', 'THIRD_PARTY_NOTICES.md',
+                     'README.md', 'SETUP.md', 'AGENTS.md', 'CLAUDE.md', 'AGENT_PROMPT.txt',
                      'src/voice_launcher.py', 'chrome-extension/dots-tts.js',
                      'chrome-extension/transcript_buffer.js', 'tools/check.py', 'docs/VOICE_MODELS.md'):
             if name not in actual:

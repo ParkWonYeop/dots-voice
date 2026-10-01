@@ -42,16 +42,16 @@ Windows 설치 후 바뀐 실행 설정은 개인 PC용이다. 릴리즈 빌드�
    python3 tools/verify_package.py artifacts/Dots-Voice-Mac.zip artifacts/Dots-Voice-Windows11.zip
    ```
 
-4. `artifacts/`에 두 ZIP과 바깥 ZIP용 `SHA256SUMS.txt`가 생성된다. 각 ZIP의 `PACKAGE_INFO.json`에는 소스 커밋·버전·플랫폼·모델 revision이, 내부 `SHA256SUMS.txt`에는 전체 파일 해시가 기록된다. 명시한 파일만 포함하므로 모델·환경·로그·계정 정보가 섞이지 않는다. Windows `.cmd`는 CRLF, Mac `.command`는 실행 권한을 유지한다.
+4. `artifacts/`에 두 ZIP과 바깥 ZIP용 `SHA256SUMS.txt`가 생성된다. 각 ZIP의 `PACKAGE_INFO.json`에는 소스 커밋·버전·라이선스·플랫폼·모델 revision이, 내부 `SHA256SUMS.txt`에는 전체 파일 해시가 기록된다. `LICENSE`와 `THIRD_PARTY_NOTICES.md`를 포함하며, 명시한 파일만 담으므로 모델·환경·로그·계정 정보가 섞이지 않는다. Windows `.cmd`는 CRLF, Mac `.command`는 실행 권한을 유지한다.
 5. 해당 커밋을 GitHub에 푸시하고 같은 커밋에 버전 태그를 붙인다. GitHub Release의 Assets에 **두 ZIP과 바깥 `SHA256SUMS.txt`**를 올린다. 릴리즈 설명에 설치 링크와 실기기 검증 범위를 함께 기록한다.
 
 예시(GitHub CLI가 인증된 유지관리자 환경):
 
 ```sh
 git push origin HEAD:main
-git tag v1.2.1
-git push origin v1.2.1
-gh release create v1.2.1 artifacts/Dots-Voice-Mac.zip artifacts/Dots-Voice-Windows11.zip artifacts/SHA256SUMS.txt --verify-tag --title 'Dots Voice v1.2.1' --notes-file docs/releases/v1.2.1.md
+git tag v1.2.2
+git push origin v1.2.2
+gh release create v1.2.2 artifacts/Dots-Voice-Mac.zip artifacts/Dots-Voice-Windows11.zip artifacts/SHA256SUMS.txt --verify-tag --title 'Dots Voice v1.2.2' --notes-file docs/releases/v1.2.2.md
 ```
 
 `--platform mac|windows`로 한쪽만 만들 수 있다. `--output-dir`로 출력 폴더를 바꿀 수 있다. `--allow-dirty`는 로컬 패키지 검사 전용이며, 이 옵션으로 만든 ZIP은 공개 릴리즈에 사용하지 않는다. 공개할 때는 GitHub에서 ZIP을 다시 내려받아 바깥 SHA-256과 내부 검증을 확인한다.

@@ -143,3 +143,7 @@ experiments/rvc/   초기 RVC 실험 보관본; 설치 ZIP에는 포함하지 �
 [Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS) · [MLX Audio](https://github.com/Blaizzy/mlx-audio) · [Mac 모델](https://huggingface.co/mlx-community/Qwen3-TTS-12Hz-0.6B-Base-4bit) · [Windows 모델](https://huggingface.co/Qwen/Qwen3-TTS-12Hz-0.6B-Base)
 
 참조 WAV는 VoiceDesign으로 생성한 합성 캐릭터 음성입니다. 출처는 `voices/designed-soft.json`과 `config/voice_candidates.json`에 기록돼 있습니다. 모델과 라이브러리는 각 배포처의 라이선스 조건을 따릅니다. dots의 페이지 구조가 바뀌면 연결 코드의 수정이 필요할 수 있습니다.
+
+## 라이선스
+
+프로젝트의 자체 코드·문서·설정·리소스는 [MIT License](LICENSE)를 따릅니다. 저작권·라이선스 고지를 유지하면 상업적 사용, 수정, 재배포가 가능합니다. 외부 모델·라이브러리와 포함된 합성 참조 음성의 적용 범위는 [라이선스·출처 안내](THIRD_PARTY_NOTICES.md)를 확인하세요. 두 설치 ZIP에도 이 파일들을 포함합니다.
