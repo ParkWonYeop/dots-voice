@@ -42,7 +42,7 @@ def verify(path):
                 raise ValueError(f'Checksum mismatch: {name}')
         for name in ('README.md', 'SETUP.md', 'AGENTS.md', 'CLAUDE.md', 'AGENT_PROMPT.txt',
                      'src/voice_launcher.py', 'chrome-extension/dots-tts.js',
-                     'chrome-extension/transcript_buffer.js', 'tools/check.py'):
+                     'chrome-extension/transcript_buffer.js', 'tools/check.py', 'docs/VOICE_MODELS.md'):
             if name not in actual:
                 raise ValueError(f'Missing installation file: {name}')
         info = json.loads(archive.read(prefix + 'PACKAGE_INFO.json'))

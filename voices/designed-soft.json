@@ -1,5 +1,5 @@
 {
-  "origin": "Synthetic VoiceDesign candidate 2, selected by the user",
+  "origin": "Synthetic VoiceDesign reference, selected by the user",
   "sourceConfig": "config/voice_candidates.json",
   "voiceId": "designed_soft",
   "sampleRate": 24000,

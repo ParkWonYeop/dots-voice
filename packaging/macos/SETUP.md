@@ -42,10 +42,10 @@ python3.11 src/setup_chrome.py --no-open
 
 Chrome이 직접 시작하는 실행 파일은 `~/Library/Application Support/Dots Voice/chrome-voice-host`에 둔다. 프로젝트의 Documents 경로에 시작 스크립트를 두면 Chrome에서 실행하기 전에 종료될 수 있다. 초기 실행 오류는 같은 폴더의 `native-host.log`에 기록한다.
 
-셸에서 검사·설치할 때는 위 Python 명령이 적합하다. Finder에서 실행할 때는 `Dots Voice 설치.command`를 사용할 수 있다. 압축 해제 도구가 실행 권한을 잃었다면 다음 명령으로 복구한다.
+셸에서 검사·설치할 때는 위 Python 명령이 적합하다. Finder에서 실행할 때는 `install-mac.command`를 사용할 수 있다. 압축 해제 도구가 실행 권한을 잃었다면 다음 명령으로 복구한다.
 
 ```sh
-chmod +x 'Dots Voice 설치.command' 'Dots Voice 종료.command'
+chmod +x 'install-mac.command' 'Dots Voice 종료.command'
 ```
 
 ## 3. Chrome에 등록
@@ -77,7 +77,7 @@ node --check chrome-extension/dots-tts.js
 .tts-venv/bin/python src/voice_launcher.py --status
 ```
 
-서버 시작은 모델 로딩·워밍업을 포함한다. 팝업은 서버 준비 → dots 페이지 연결 → 2번 목소리 연결 단계를 표시한다. `2번 목소리 연결 완료`를 확인한다. `소리를 켜 주세요`가 나오면 dots 페이지를 한 번 클릭한다. 사용자에게 새 통화에서 2번 목소리가 들리는지, 원음과 겹치지 않는지, 말을 시작했을 때 재생이 멈추는지 확인해 달라고 요청한다. 에이전트는 소리를 들을 수 없으므로 들리는 결과는 사용자에게 확인을 요청하고 그 답을 그대로 보고한다. 서버 준비만으로 실제 브라우저 출력까지 검증됐다고 보고하지 않는다.
+서버 시작은 모델 로딩·워밍업을 포함한다. 팝업은 서버 준비 → dots 페이지 연결 → 로컬 목소리 연결 단계를 표시한다. `로컬 목소리 연결 완료`를 확인한다. `소리를 켜 주세요`가 나오면 dots 페이지를 한 번 클릭한다. 사용자에게 새 통화에서 로컬 목소리가 들리는지, 원음과 겹치지 않는지, 말을 시작했을 때 재생이 멈추는지 확인해 달라고 요청한다. 에이전트는 소리를 들을 수 없으므로 들리는 결과는 사용자에게 확인을 요청하고 그 답을 그대로 보고한다. 서버 준비만으로 실제 브라우저 출력까지 검증됐다고 보고하지 않는다.
 
 종료:
 
@@ -87,7 +87,7 @@ node --check chrome-extension/dots-tts.js
 
 ## 오류 처리
 
-- **설치 `.command`를 열 수 없음:** 터미널에서 압축 해제 폴더로 이동한 뒤 `zsh 'Dots Voice 설치.command'` 또는 `python3.11 src/setup_chrome.py`를 실행한다. 보안 설정을 임의로 해제하지 않는다.
+- **설치 `.command`를 열 수 없음:** 터미널에서 압축 해제 폴더로 이동한 뒤 `zsh 'install-mac.command'` 또는 `python3.11 src/setup_chrome.py`를 실행한다. 보안 설정을 임의로 해제하지 않는다.
 - **Python·패키지 설치 실패:** 정확한 오류와 macOS/Python 아키텍처를 확인한다. 잠금 파일을 임의로 최신 버전으로 바꾸지 않는다.
 - **로컬 실행기를 찾지 못함:** 설치기를 다시 실행해 현재 폴더 경로로 호스트를 등록하고, 빌드된 확장을 새로고침한다.
 - **Native host has exited:** 갱신된 설치기를 실행해 앱 데이터 폴더의 실행기로 다시 등록한다. 계속 실패하면 `~/Library/Application Support/Dots Voice/native-host.log`를 확인한다. 파일 접근 거부라면 사용자가 macOS의 파일 및 폴더 권한을 확인하도록 안내한다. 권한 설정을 우회하거나 전체 디스크 접근을 임의로 부여하지 않는다.

@@ -9,7 +9,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 COMMON = [
-    '.gitignore', 'voice_launcher.py',
+    '.gitignore', 'voice_launcher.py', 'docs/VOICE_MODELS.md',
     'src/audio_stream.py', 'src/voice_launcher.py',
     'src/tts_bridge_server.py', 'src/tts_worker.py',
     'config/voice_candidates.json', 'voices/designed-soft.json', 'voices/designed-soft.wav',
@@ -24,7 +24,7 @@ COMMON = [
     'chrome-extension/icon-48.png', 'chrome-extension/icon-128.png',
 ]
 PLATFORM = {
-    'mac': ['Dots Voice 설치.command', 'Dots Voice 종료.command', 'src/setup_chrome.py',
+    'mac': ['install-mac.command', 'Dots Voice 종료.command', 'src/setup_chrome.py',
             'requirements/requirements.tts.lock.txt', 'tests/setup_chrome_test.py'],
     'windows': ['install-windows.cmd', 'stop-windows.cmd', 'src/setup_windows.py',
                 'src/hardware_profile.py', 'src/tts_torch_engine.py', 'src/tts_diagnose.py',

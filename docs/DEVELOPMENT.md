@@ -29,6 +29,8 @@ python3.11 -m venv .venv
 
 Windows 설치 후 바뀐 실행 설정은 개인 PC용이다. 릴리즈 빌드는 커밋된 Mac 기본 설정과 Windows 기본 설정에서 만든다.
 
+목소리 또는 모델을 직접 교체하는 절차는 [별도 안내](VOICE_MODELS.md)를 따른다.
+
 ## 릴리즈 제작
 
 1. `chrome-extension/manifest.json`의 버전, `CHANGELOG.md`, 설치 지침을 갱신한다.
@@ -46,10 +48,10 @@ Windows 설치 후 바뀐 실행 설정은 개인 PC용이다. 릴리즈 빌드�
 예시(GitHub CLI가 인증된 유지관리자 환경):
 
 ```sh
-git push
-git tag v1.2.0
-git push origin v1.2.0
-gh release create v1.2.0 artifacts/Dots-Voice-Mac.zip artifacts/Dots-Voice-Windows11.zip artifacts/SHA256SUMS.txt --verify-tag --title 'Dots Voice v1.2.0' --notes-file docs/releases/v1.2.0.md
+git push origin HEAD:main
+git tag v1.2.1
+git push origin v1.2.1
+gh release create v1.2.1 artifacts/Dots-Voice-Mac.zip artifacts/Dots-Voice-Windows11.zip artifacts/SHA256SUMS.txt --verify-tag --title 'Dots Voice v1.2.1' --notes-file docs/releases/v1.2.1.md
 ```
 
 `--platform mac|windows`로 한쪽만 만들 수 있다. `--output-dir`로 출력 폴더를 바꿀 수 있다. `--allow-dirty`는 로컬 패키지 검사 전용이며, 이 옵션으로 만든 ZIP은 공개 릴리즈에 사용하지 않는다. 공개할 때는 GitHub에서 ZIP을 다시 내려받아 바깥 SHA-256과 내부 검증을 확인한다.

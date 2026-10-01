@@ -1,6 +1,6 @@
 # Dots Voice · Mac 설치 패키지
 
-Chrome의 dots 통화 답변을 포함된 2번 캐릭터 목소리로 읽게 하는 로컬 도구다.
+Chrome의 dots 통화 답변을 포함된 로컬 캐릭터 목소리로 읽게 하는 로컬 도구다.
 
 > **AI 에이전트라면:** `AGENTS.md`를 먼저 읽고 `SETUP.md` 순서대로 진행한다.
 
@@ -18,10 +18,10 @@ Codex, Claude Code, Cursor처럼 **내 컴퓨터에서 명령을 실행할 수 �
 ## 직접 설치
 
 1. 압축을 풀어 홈 폴더 아래(예: `~/Dots-Voice-Mac`)처럼 계속 보관할 위치에 둔다. 데스크탑·문서·다운로드 폴더는 macOS 개인정보 보호 때문에 Chrome이 실행기를 시작하지 못할 수 있다. 설치 후 폴더를 옮겼다면 설치기를 다시 실행한다.
-2. Python 3.11이 준비된 상태에서 `Dots Voice 설치.command`를 더블클릭한다. Homebrew가 이미 있다면 Python 설치 명령은 `brew install python@3.11`이다. ‘확인되지 않은 개발자’ 경고로 열리지 않으면 **시스템 설정 → 개인정보 보호 및 보안 → 그래도 열기**를 누르거나, 터미널에서 이 폴더로 이동해 `zsh 'Dots Voice 설치.command'`를 실행한다.
+2. Python 3.11이 준비된 상태에서 `install-mac.command`를 더블클릭한다. Homebrew가 이미 있다면 Python 설치 명령은 `brew install python@3.11`이다. ‘확인되지 않은 개발자’ 경고로 열리지 않으면 **시스템 설정 → 개인정보 보호 및 보안 → 그래도 열기**를 누르거나, 터미널에서 이 폴더로 이동해 `zsh 'install-mac.command'`를 실행한다.
 3. Chrome 주소창에 `chrome://extensions`를 입력한다. 개발자 모드를 켜고 **압축해제된 확장 프로그램 로드**에서 이 폴더 안의 `runtime/chrome-extension`을 선택한다. 도구 모음의 퍼즐 아이콘을 눌러 Dots Voice를 고정(핀)하면 버튼이 보인다.
 4. **실제 dots 대화 탭으로 이동한 뒤** 도구 모음의 Dots Voice 버튼을 누른다. 확장 관리 화면에서는 실행하지 않는다.
-5. 팝업에 연결 단계가 표시된다. **2번 목소리 연결 완료**를 확인하고 새 통화를 시작한다. **소리를 켜 주세요**가 나오면 dots 페이지를 한 번 클릭한다. 아이콘 배지 `ON`은 연결됨, `클릭`은 페이지 클릭 필요, `!`는 오류다.
+5. 팝업에 연결 단계가 표시된다. **로컬 목소리 연결 완료**를 확인하고 새 통화를 시작한다. **소리를 켜 주세요**가 나오면 dots 페이지를 한 번 클릭한다. 아이콘 배지 `ON`은 연결됨, `클릭`은 페이지 클릭 필요, `!`는 오류다.
 
 다음부터는 새 통화 전에 Dots Voice 버튼만 누른다. 로컬 서버는 자동 실행되고 이미 켜져 있으면 재사용한다. 페이지를 새로고침했으면 버튼을 다시 누른다. 팝업의 **원래 목소리**는 해당 탭의 후크를 제거한다. 서버까지 끄려면 `Dots Voice 종료.command`를 실행한다.
 
@@ -42,3 +42,7 @@ Chrome에서 WebRTC 데이터 채널의 답변 자막을 받아 로컬 Qwen3-TTS
 설치 문제가 나면 에이전트에게 `SETUP.md`의 오류 처리를 따라 진단해 달라고 요청한다. 포함 파일의 SHA-256은 `SHA256SUMS.txt`, 배포 정보는 `PACKAGE_INFO.json`에 있다.
 
 모델·라이브러리 출처: [MLX 모델](https://huggingface.co/mlx-community/Qwen3-TTS-12Hz-0.6B-Base-4bit), [Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS), [MLX Audio](https://github.com/Blaizzy/mlx-audio). 모델과 의존성은 각 배포처의 라이선스 조건을 따른다.
+
+## 목소리·모델 교체
+
+ZIP 안의 `docs/VOICE_MODELS.md`를 따른다. 참조 WAV와 SHA-256을 바꾸는 음색 교체, 플랫폼에 맞는 Base 모델·revision·저장 폴더를 바꾸는 모델 교체, 재시작·확인·원복 절차를 설명한다. GitHub에서 읽는 경우 [온라인 안내](https://github.com/ParkWonYeop/dots-voice/blob/main/docs/VOICE_MODELS.md)를 사용한다.

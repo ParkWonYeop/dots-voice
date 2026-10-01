@@ -3,6 +3,7 @@
 - 이 저장소의 개발 작업은 README.md와 docs/DEVELOPMENT.md를 기준으로 한다. 하위 에이전트를 사용하지 않는다.
 - 설치 요청은 운영체제별 packaging/macos 또는 packaging/windows의 AGENTS.md와 SETUP.md를 따른다. 배포 ZIP에는 이 지침들이 루트에 복사된다.
 - 선택한 voices/designed-soft.wav, 모델 ID·revision, 확장 공개 키를 사용자 요청 없이 바꾸지 않는다.
+- 사용자가 목소리·모델 교체를 요청하면 docs/VOICE_MODELS.md를 따른다. 문서 작성 요청만으로 실제 음성 설정을 바꾸지 않는다.
 - src/는 실행 코드, chrome-extension/은 브라우저 코드, config/는 설정, tests/는 검사, tools/는 개발·배포 도구다.
 - 폴더 구조를 바꾸면 설치기, 네이티브 실행기, 패키지 허용 목록, 검사, 설치 문서의 경로를 함께 갱신한다.
 - 변경에 맞는 검사를 tools/check.py로 실행한다. 릴리즈 ZIP은 tools/verify_package.py로 검증한다. Windows 모의 검사 통과를 실기기 통화 확인으로 보고하지 않는다.

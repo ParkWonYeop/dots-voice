@@ -42,7 +42,7 @@ except PackageNotFoundError: sys.exit(1)
     config = json.loads((ROOT / 'config/voice_settings.json').read_text())
     reference = ROOT / config['referenceAudio']
     if hashlib.sha256(reference.read_bytes()).hexdigest() != config['referenceSha256']:
-        raise RuntimeError('2번 목소리 참조 파일이 변경됐습니다.')
+        raise RuntimeError('참조 음성 파일이 변경됐습니다.')
     print('모델 파일을 확인합니다. 처음 설치할 때만 다운로드가 오래 걸립니다.', flush=True)
     # Download only; do not run the comparison script or contend with an active call.
     run(python, '-c', "from huggingface_hub import snapshot_download; import json; from pathlib import Path; c=json.loads(Path('config/voice_settings.json').read_text()); snapshot_download(c['model'], revision=c['revision'], local_dir=c['modelDirectory'])")

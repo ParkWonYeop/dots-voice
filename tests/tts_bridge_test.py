@@ -30,7 +30,7 @@ def test_pause_limiter():
 def test_selected_design():
     config={'modelDirectory':'unused','mode':'voice_design','speaker':'designed_soft','style':'designed_soft',
             'language':'Korean','temperature':0.8,'streamingInterval':0.64,
-            'styles':{'designed_soft':'The exact instruction used for the selected second sample.'}}
+            'styles':{'designed_soft':'The exact instruction used for the selected reference sample.'}}
     engine=Engine(config);calls=[]
     class Model:
         def generate_voice_design(self,**kwargs):
