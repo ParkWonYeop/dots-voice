@@ -1,5 +1,7 @@
 # 연결 구조
 
+현재 데스크톱 구현을 설명한다. 모바일 앱에서 PC 통화를 원격으로 사용하는 확장안은 [모바일 원격 통화 설계](MOBILE_REMOTE_DESIGN.md)에 정리했다. 해당 설계는 아직 구현되지 않았다.
+
 1. 사용자가 dots 대화 탭에서 확장 버튼을 누른다.
 2. 확장 background가 Chrome Native Messaging으로 `src/voice_launcher.py`를 호출한다.
 3. 실행기는 현재 폴더·설정과 일치하는 서버를 재사용하거나 전용 Python 환경으로 TTS 서버를 시작한다.
