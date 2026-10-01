@@ -1,0 +1,8 @@
+{
+  "origin": "Synthetic VoiceDesign candidate 2, selected by the user",
+  "sourceConfig": "config/voice_candidates.json",
+  "voiceId": "designed_soft",
+  "sampleRate": 24000,
+  "seconds": 11.76,
+  "sha256": "835e8fd278a9d90d49edbe2cf221a589b1de348d9d084807af0740a9e8929e05"
+}

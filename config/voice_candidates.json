@@ -1,0 +1,42 @@
+{
+  "text": "앗, 왔구나. 오늘은 어땠어? 나는 네 얘기 듣는 게 좋아. 우리 조금만 더 이야기할까?",
+  "language": "Korean",
+  "streamingInterval": 0.64,
+  "temperature": 0.8,
+  "seed": 42,
+  "models": {
+    "custom": {
+      "repo": "mlx-community/Qwen3-TTS-12Hz-1.7B-CustomVoice-4bit",
+      "revision": "f35faf19b0cc2160865af64ecf0f22f83d335135",
+      "directory": "models/qwen3-tts-customvoice-4bit",
+      "mode": "custom_voice"
+    },
+    "design": {
+      "repo": "mlx-community/Qwen3-TTS-12Hz-1.7B-VoiceDesign-4bit",
+      "revision": "5c390979e4b93af5f2932f90742ca99c7dd04687",
+      "directory": "models/qwen3-tts-voicedesign-4bit",
+      "mode": "voice_design"
+    }
+  },
+  "voices": [
+    {
+      "id": "ono_anna",
+      "label": "오노 안나 · 가벼운 캐릭터 톤",
+      "model": "custom",
+      "speaker": "Ono_Anna",
+      "instruct": "Use a light, clear, delicate feminine voice with a slightly higher pitch and a cute anime character feel. Speak Korean naturally at an ordinary conversational volume and pace, as a healthy young adult woman talking warmly to a close friend. Keep the voice slender but the delivery steady, clear and lively. Keep the pitch and timbre consistent between sentences, with gentle playful intonation, a small smile and clear Korean pronunciation."
+    },
+    {
+      "id": "designed_soft",
+      "label": "새 음색 · 여리여리한 자연스러운 대화체",
+      "model": "design",
+      "instruct": "A very feminine young adult woman's voice, like a gentle heroine in Korean anime dubbing. A naturally high soprano with a slender, light, delicate and clear timbre. The voice is fine and feminine, while the speaking manner is healthy, relaxed and naturally lively. Use steady clear vocal support at an ordinary conversational volume and pace. Speak Korean warmly to a close friend, with a small smile, natural curiosity and expressive flowing intonation. Maintain the same voice between sentences, with clear Korean diction and friendly endings."
+    },
+    {
+      "id": "designed_sweet",
+      "label": "새 음색 · 맑고 달달한 캐릭터 톤",
+      "model": "design",
+      "instruct": "An unmistakably feminine young adult Korean anime heroine voice. A high, sparkling and sweet soprano with a slender clear timbre and very light vocal weight. The delivery is healthy, steady, bright and gently cheerful, with a smiling tone and playful melodic rises. Speak Korean naturally at normal conversational volume and pace to someone you like, using graceful, affectionate phrasing and friendly rounded endings. Keep the identity and pitch consistent and pronounce Korean clearly, with lively energy and a light touch rather than exaggerated cartoon acting."
+    }
+  ]
+}

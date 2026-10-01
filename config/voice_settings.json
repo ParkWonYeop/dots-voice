@@ -1,0 +1,26 @@
+{
+  "model": "mlx-community/Qwen3-TTS-12Hz-0.6B-Base-4bit",
+  "modelDirectory": "models/qwen3-tts-base-0.6b-4bit",
+  "revision": "0d6bb6fe33f92d47a507e23b9148940e8366ab5b",
+  "speaker": "designed_soft",
+  "language": "Korean",
+  "style": "designed_soft",
+  "streamingInterval": 0.32,
+  "playbackBufferSeconds": 0,
+  "temperature": 0.7,
+  "seed": 42,
+  "styles": {
+    "calm": "차분하고 담백한 한국어 대화체로 말해주세요. 감정을 크게 과장하지 않고 편안하고 고른 억양을 사용하세요.",
+    "lively": "친한 사람에게 반갑게 말을 거는 밝고 생기 있는 한국어 대화체로 말해주세요. 살짝 미소 짓는 느낌으로, 단어마다 자연스러운 강세와 음높이 변화를 주세요. 질문 끝에는 호기심을, 마지막 문장에는 즐거움을 담으세요. 과장된 애교나 아나운서 낭독조는 피하세요.",
+    "anime_light": "밝고 장난스러운 한국어 애니메이션의 젊은 성인 여성 캐릭터처럼 말해주세요. 원래의 편안한 대화체를 유지하면서 음색은 살짝 더 높고 맑고 가볍게, 미소 짓는 귀여운 느낌을 주세요. 음높이와 강세를 생동감 있게 바꾸고, 질문에는 호기심을 담고, 문장 끝은 부드럽고 살짝 애교 있게 마무리하세요. 한국어 발음은 또렷하고 자연스럽게 해주세요.",
+    "anime_strong": "귀엽고 발랄한 한국어 애니메이션 더빙의 성인 여성 캐릭터 목소리로 연기해주세요. 맑고 가벼운 높은 음색, 통통 튀는 억양, 장난스러운 웃음기, 선명한 감정 변화와 귀여운 문장 끝 억양을 사용하세요. 반가운 첫 인사와 호기심 있는 질문을 풍부하게 표현하고, 모음을 자연스럽게 살짝 늘이면서 애교 있는 캐릭터 연기를 해주세요. 한국어 발음은 또렷하게 유지하세요.",
+    "anime_soft": "맑고 가늘고 여리여리한 음색의 한국어 애니메이션 젊은 성인 여성 캐릭터처럼 말해주세요. 평소보다 살짝 높은 음높이와 가볍고 여성스러운 음색을 사용하되, 발성은 안정적이고 또렷하게 유지하세요. 가까운 사람과 편하게 이야기하는 평소 대화의 볼륨과 속도로, 자연스러운 생기와 작은 미소를 담아 말해주세요. 말의 흐름과 문장 사이의 음색은 일관되게 이어지고, 질문에는 호기심을 담아 억양을 충분히 움직이세요. 문장 끝은 다정하게 마무리하고, 숨소리보다 선명한 목소리와 자연스러운 한국어 발음이 들리게 해주세요.",
+    "designed_soft": "A very feminine young adult woman's voice, like a gentle heroine in Korean anime dubbing. A naturally high soprano with a slender, light, delicate and clear timbre. The voice is fine and feminine, while the speaking manner is healthy, relaxed and naturally lively. Use steady clear vocal support at an ordinary conversational volume and pace. Speak Korean warmly to a close friend, with a small smile, natural curiosity and expressive flowing intonation. Maintain the same voice between sentences, with clear Korean diction and friendly endings."
+  },
+  "mode": "speaker_reference",
+  "referenceAudio": "voices/designed-soft.wav",
+  "referenceSha256": "835e8fd278a9d90d49edbe2cf221a589b1de348d9d084807af0740a9e8929e05",
+  "repetitionPenalty": 1.2,
+  "maxPauseSeconds": 0.24,
+  "silenceThreshold": 0.002
+}

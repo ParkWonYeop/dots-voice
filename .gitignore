@@ -1,0 +1,12 @@
+# Local environments, generated audio, models, and authenticated runtime state.
+.venv/
+.tts-venv/
+runtime/
+models/
+artifacts/
+__pycache__/
+*.py[cod]
+*.log
+.DS_Store
+.env
+.env.*

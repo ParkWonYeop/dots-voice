@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Dots Voice",
+  "version": "1.2.0",
+  "description": "선택한 dots 통화에 로컬 2번 캐릭터 목소리를 연결합니다.",
+  "icons": {
+    "16": "icon-16.png",
+    "32": "icon-32.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3OmG6Ws8XlwLEr4JTFhbhAmYJrgCxy+Oo3sh8eDz97ECpMLUAtVrbELEjVoUSGzL1qrqsFRQJkr6ef63lqeUhEmi4+mZ6BKJ6e7pshvWcNeyzYiH2aLi6/wWZJS/sTbcmEyvpInRxZoPk0AQaSaWXq1sRTy+oNFN3kIZodTfV0a8/p9UmA1qFxEo/hSSquuTkT8fkvC765AuSkIZv59dHyEF/SrssngynuDAFZrlr4Jjr+Wzbb9RZmaPPJ5xDsroqNi2DDPju+HUG8UKQJlWCMOyFB7g2Dbb/G1F3LCVSGhsXEiABSSabW/9VMp8iMwP0hACjWb/iRXwePPL1TDloQIDAQAB",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "nativeMessaging"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Dots Voice · 목소리 연결",
+    "default_icon": {
+      "16": "icon-16.png",
+      "32": "icon-32.png"
+    },
+    "default_popup": "popup.html"
+  }
+}

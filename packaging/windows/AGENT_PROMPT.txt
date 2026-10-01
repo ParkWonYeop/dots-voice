@@ -1,0 +1,8 @@
+첨부한 Dots Voice 설치 패키지(Dots-Voice-Windows11.zip 또는 압축을 푼 폴더)를 이 Windows PC에 설치하고 Chrome dots 통화에 연결해 줘.
+
+- ZIP이면 먼저 차단 해제(Unblock-File)한 뒤 %USERPROFILE%\Dots-Voice-Windows11 처럼 OneDrive 동기화 밖의 고정 폴더에 풀어 줘.
+- 폴더의 AGENTS.md를 먼저 읽고 SETUP.md 순서대로 진행해 줘. CPU, 메모리, GPU는 나한테 묻기 전에 직접 확인해서 알맞게 설정해 줘.
+- 포함된 2번 목소리 WAV, 모델과 revision, 확장 키는 바꾸지 마. 장치, dtype, 스레드만 사양에 맞게 조정해 줘.
+- 실제 합성 속도를 측정해서 알려주고, 느리거나 실패하면 진단 결과를 보고 조정해 줘. 유료 서비스나 다른 목소리로 바꾸지는 마.
+- Chrome 확장 등록처럼 내가 직접 해야 하는 단계는 무엇을 누르면 되는지 정확히 알려주고, 내가 했다고 하면 이어서 확인해 줘.
+- 끝나면 실제로 통과한 것과 내가 아직 확인해야 할 것을 나눠서 짧게 알려줘.

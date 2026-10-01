@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dots Voice</title>
+<link rel="stylesheet" href="popup.css">
+<body data-state="checking">
+  <header>
+    <img src="icon-48.png" alt="" width="20" height="20">
+    <strong>Dots Voice</strong>
+    <span class="chip">2번 목소리</span>
+  </header>
+
+  <div class="stage" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+
+  <section role="status" aria-live="polite">
+    <h1 id="title">상태를 확인하고 있어요</h1>
+    <p id="detail"></p>
+    <code id="error" hidden></code>
+    <ol id="steps" hidden>
+      <li data-step="server">로컬 음성 서버 준비</li>
+      <li data-step="page">dots 페이지에 연결</li>
+      <li data-step="voice">2번 목소리 연결</li>
+    </ol>
+    <p id="metrics" hidden></p>
+  </section>
+
+  <div class="actions">
+    <button id="connect" class="primary" hidden>다시 연결</button>
+    <button id="reload" class="primary" hidden>확장 프로그램 새로고침</button>
+    <button id="test" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+      <span>목소리 듣기</span>
+    </button>
+    <button id="disable" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 14 4 9l5-5"/><path d="M4 9h11a5 5 0 0 1 0 10h-3"/></svg>
+      <span>원래 목소리</span>
+    </button>
+  </div>
+
+  <footer>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+    답변 음성은 이 컴퓨터에서만 합성돼요
+  </footer>
+  <script src="popup.js" type="module"></script>
+</body>
+</html>

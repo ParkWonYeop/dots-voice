@@ -1,0 +1,12 @@
+# Core pins; torch/torchaudio 2.10.0 CPU or cu128 are installed after the hardware check.
+# The installer records the fully resolved environment in runtime/installed-packages.txt.
+-c requirements.windows.lock.txt
+qwen-tts==0.1.1
+transformers==4.57.3
+accelerate==1.12.0
+numpy==2.2.6
+soundfile==0.14.0
+aiortc==1.15.0
+aiohttp==3.14.3
+av==17.1.0
+huggingface-hub==0.36.2
